@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: mongo:4.0
+    environment:
+      MONGO_INIDB_ROOT_USERNAME: mongoadmin
+      MONGO_INIDB_ROOT_PASSWORD: test123
+    
+    volumes:
+      - ./MongodbData/:/data/db
+    ports:
+      - 28017:27017
